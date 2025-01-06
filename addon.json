@@ -1,0 +1,15 @@
+{
+    "display_name": "Restart Anki",
+    "module_name": "anki_restart",
+    "repo_name": "anki-restart",
+    "ankiweb_id": "435549500",
+    "author": "shohi",
+    "contact": "https://github.com/shohi/anki-restart",
+    "homepage": "https://github.com/shohi/anki-restart",
+    "copyright_start": 2025,
+    "conflicts": [],
+    "targets": [
+        "anki21"
+    ],
+    "min_anki_version": "24.11"
+}
