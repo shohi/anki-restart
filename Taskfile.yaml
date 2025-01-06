@@ -11,4 +11,4 @@ tasks:
     desc: Package add-on
     silent: true
     cmds:
-      - zip -r release/anki_restart.ankiaddon * -x "release/*" -x "Taskfile.yaml" -x "README.md" -x ".gitignore"
+      - zip -r release/anki_restart.ankiaddon * -x "release/*" -x "Taskfile.yaml" -x "README.md" -x ".gitignore" -x "__pycache__/*"
