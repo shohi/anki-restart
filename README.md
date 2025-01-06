@@ -10,4 +10,4 @@ and install it using the provided installation code.
 
 ## Usage
 
-Click `Tools` > `Add-ons` > `Restart Anki`.
+Click `Tools` > `Restart Anki`.
