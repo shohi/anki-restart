@@ -1,0 +1,34 @@
+{:paths ["bb"]
+ :min-bb-version "1.12.209"
+ :tasks
+ {:requires ([babashka.process :as process]
+             [tasks])
+
+  default
+  {:doc "List all available tasks"
+   :task (process/shell "bb tasks")}
+
+  lint
+  {:doc "Run ruff linter"
+   :task (process/shell "ruff check .")}
+
+  lint-fix
+  {:doc "Run ruff linter with auto-fix"
+   :task (process/shell "ruff check --fix .")}
+
+  format
+  {:doc "Run ruff formatter"
+   :task (process/shell "ruff format .")}
+
+  check
+  {:doc "Run all code quality checks"
+   :depends [lint format]}
+
+  package
+  {:doc "Package add-on"
+   :depends [check]
+   :task (tasks/create-package)}
+
+  dev
+  {:doc "Setup local debugging by creating symlink to Anki addons directory"
+   :task (tasks/setup-symlink)}}}
