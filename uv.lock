@@ -35,9 +35,7 @@ wheels = [
 name = "anki-restart"
 version = "0.1.0"
 source = { virtual = "." }
-
-[package.optional-dependencies]
-dev = [
+dependencies = [
     { name = "aqt" },
     { name = "mypy" },
     { name = "ruff" },
@@ -45,9 +43,9 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "aqt", extras = ["qt6"], marker = "extra == 'dev'", specifier = ">=25.9.2" },
-    { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.18.2" },
-    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.14.0" },
+    { name = "aqt", extras = ["qt6"], specifier = ">=25.9.2" },
+    { name = "mypy", specifier = ">=1.18.2" },
+    { name = "ruff", specifier = ">=0.14.0" },
 ]
 provides-extras = ["dev"]
 
