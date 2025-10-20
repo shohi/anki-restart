@@ -5,11 +5,9 @@ description = "Anki add-on to restart Anki"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    # No production dependencies - all provided by Anki
-    # Put here just for local dev convinience.
-    "mypy>=1.18.2",
     "ruff>=0.14.0",
-    "aqt[qt6]>=25.9.2"
+    "aqt>=25.9.2",
+    "pyright>=1.1.406",
 ]
 
 [project.optional-dependencies]
